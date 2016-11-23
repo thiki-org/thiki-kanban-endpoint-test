@@ -1,0 +1,47 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+apply plugin: 'gauge'
+
+group = "thiki-kanban-endpoint-test"
+version = "1.0.0"
+
+description = "Gauge example using selenium web driver"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    manifest {
+        attributes "Main-Class": "$mainClassName"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.thoughtworks.gauge.gradle:gauge-gradle-plugin:+'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.thoughtworks.gauge:gauge-java:+'
+    testCompile 'junit:junit:4.12'
+    testCompile 'io.github.bonigarcia:webdrivermanager:1.4.1'
+    compile 'org.seleniumhq.selenium:selenium-support:3.0.1'
+    compile 'com.jayway.restassured:rest-assured:2.9.0'
+}
+
+gauge {
+    specsDir = 'specs'
+}
