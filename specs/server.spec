@@ -1,8 +1,8 @@
 server
 =========
 
-远程服务启动后，可以通过接口调用其入口。
+Verify whether remote server has already startup successfully.
 ---------------------
 
-* 访问远程入口
+* Visit remote server.
 

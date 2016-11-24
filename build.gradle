@@ -45,3 +45,7 @@ dependencies {
 gauge {
     specsDir = 'specs'
 }
+
+compileJava {
+    options.encoding = "UTF-8"
+}
