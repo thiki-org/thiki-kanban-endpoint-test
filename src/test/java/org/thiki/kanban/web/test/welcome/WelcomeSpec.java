@@ -25,7 +25,7 @@ public class WelcomeSpec {
     @Step("Verify page title.")
     public void checkPageTitle() {
         String actualTitle = driver.getTitle();
-        assertEquals(actualTitle, "思奇精益看板-以乐趣创造乐趣");
+        assertEquals(actualTitle, "thiki");
     }
 
     @Step("Open login modal.")
