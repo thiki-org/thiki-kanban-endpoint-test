@@ -12,7 +12,7 @@ import static org.hamcrest.CoreMatchers.equalTo;
  * Created by xubt on 23/11/2016.
  */
 public class ServerSpec {
-    @Step("访问远程入口")
+    @Step("Visit remote server.")
     public void checkPageTitle() throws IOException {
         String serverAddress = PropertiesUtil.loadPropByName("server");
         given().when()
