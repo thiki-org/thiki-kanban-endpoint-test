@@ -13,5 +13,6 @@ echo "server=$1" >>env/default/init.properties
 echo "welcomePage=$2" >>env/default/init.properties
 
 echo "init done."
-
-chmod 777 build/test-results/binary/gauge
+if [ -d "build/test-results/binary/gauge" ]; then
+    chmod 777 build/test-results/binary/gauge
+fi
